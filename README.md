@@ -26,6 +26,7 @@ QSPR modeling involves two steps:
 - Seaborn
 - Matplotlib
 - Yellowbrick
+- Statsmodels
 - Scikit-learn
 
 ## License
