@@ -6,10 +6,10 @@ Quantitative structure-property relationship (QSPR) modeling is a regression or 
 
 QSPR modeling involves two steps:
 - Featurization/Fingerprinting: This step transforms the chemical structures into molecular descriptors or numerical vectors that are further as inputs to machine-learning models. This is a crucial step in QSPR modeling as the generated descriptors are expected to contain all the necessary information about substructures/chemical groups present in the drug molecule, and these substructures/chemical groups are highly correlated the property or activity of the drugs. There are several schemes to do fingerprinting ranging from as simples as dictionary of molecular properties to as complex as the use of Graph Neural Network. Here we use the fours schemes: 
--- Morgan (or Circular or ECFP) and topological fingerprints.    
--- RDKit topological fingerprints
--- MACCS Keys
--- RDKit Molecular Descriptors
+	-- Morgan (or Circular or ECFP) and topological fingerprints.    
+	-- RDKit topological fingerprints
+	-- MACCS Keys
+	-- RDKit Molecular Descriptors
 
 - Machine-learning modeling: The second step is to fit an appropriate regression (or classification) model to correlate the molecular descriptors with the property/activity of the drug molecules. Here, we demonstrate this step for an important physico-chemical property of drug molecules called aqueous solubility (S) (typically measured as log(S)). We compare various regression models and examine their performance using common metrics. 
 
