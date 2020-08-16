@@ -7,7 +7,9 @@ features given the input SMILES:
    -- Morgan fp
    -- RDKit fo
    -- RDKit Descriptors
-   -- Coloumb Matrices
+   -- MACCS Keys
+   -- Customized fingerprints (ex. singlets, doublets):
+      to be read from a file.
 """
 
 import os

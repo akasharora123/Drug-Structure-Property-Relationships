@@ -13,11 +13,11 @@ QSPR modeling involves two steps:
 
 - **Machine-learning modeling:** The second step is to fit an appropriate regression (or classification) model to correlate the molecular descriptors/features with the property of the drug molecules. Here, we demonstrate this step for an important physicochemical property called aqueous solubility (S) (typically measured as log(S)). We compare various regression models and examine their performance using common metrics. 
 
-## Data and References:
-- Data: MoleculeNet Datasets (http://moleculenet.ai/datasets-1)
-- ESOL:  Estimating Aqueous Solubility Directly from Molecular Structure (https://pubs.acs.org/doi/abs/10.1021/ci034243x) 
-- Molecular Descriptors and Fingerprints: (http://datascience.unm.edu/biomed505/Course/Cheminformatics/basic/descs_fingers/molec_descs_fingerprints.htm)
- 
+## Files Description
+- qsar: main notebook for analysis
+- featurizer.py: class (wrapper over RDKit) for generating different feature types
+- utilities.py: some utilitiy function for plot aesthetics and model fitting
+- best_regularized_models.py: class to find hyperparameters-optimized models using Gridsearch and Cross-validation.
 
 ## Prerequisites
 - Python
@@ -28,6 +28,11 @@ QSPR modeling involves two steps:
 - Yellowbrick
 - Statsmodels
 - Scikit-learn
+
+## Data and References:
+- Data: MoleculeNet Datasets (http://moleculenet.ai/datasets-1)
+- ESOL:  Estimating Aqueous Solubility Directly from Molecular Structure (https://pubs.acs.org/doi/abs/10.1021/ci034243x) 
+- Molecular Descriptors and Fingerprints: (http://datascience.unm.edu/biomed505/Course/Cheminformatics/basic/descs_fingers/molec_descs_fingerprints.htm)
 
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)

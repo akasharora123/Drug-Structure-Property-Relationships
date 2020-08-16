@@ -4,12 +4,10 @@
 """
 A few utility functions:
 
--- polymerize: polymerize a molecule, i.e.,
-   translate SMILES by adding repeat units in between 
-
--- inverse_transform_labels: To tranform the reposnse (one-hot-encoded) 
-   variables back into label names for a multi-class multi-label problem
-
+-- compute metrics: to compute commong rgeression metrics
+-- plot_reg: to plot the pairity plots for regression with 
+             metrics as text
+-- plot_style: cutomized plot setting for all plots
 -- setup_plot: functiont to customize plot
 
 """
@@ -31,23 +29,6 @@ from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
                                AutoMinorLocator)
 
 
-def polymerize(Smiles, repeats):
-
-    start = Smiles[0]+'6'+Smiles[1:]
-    end = Smiles+'6'
-    return start+repeats*Smiles+end
-
-
-def setup_plot(ax, lgflag):
-    ax.minorticks_on()
-    ax.xaxis.set_minor_locator(AutoMinorLocator(5))
-    ax.tick_params(axis='both', which='major', direction='in',
-                    top=True, right=True, length=7, width=0.25)
-    ax.tick_params(axis='both', which='minor', direction='in',
-                  top=True, right=True, length=3.5, width=0.25)
-    if(lgflag=='Y'):
-       lg = ax.legend()
-       lg.get_frame().set_linewidth(0.25)
 
 
 def compute_metrics(y_true, y_pred):
@@ -141,3 +122,16 @@ def plot_style():
             }
 
     return style_dict
+
+
+def setup_plot(ax, lgflag):
+    ax.minorticks_on()
+    ax.xaxis.set_minor_locator(AutoMinorLocator(5))
+    ax.tick_params(axis='both', which='major', direction='in',
+                    top=True, right=True, length=7, width=0.25)
+    ax.tick_params(axis='both', which='minor', direction='in',
+                  top=True, right=True, length=3.5, width=0.25)
+    if(lgflag=='Y'):
+       lg = ax.legend()
+       lg.get_frame().set_linewidth(0.25)
+

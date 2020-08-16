@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-Obtain the best regularized parameters
-for common models using GridSearch and CV.
+Obtain the hyperparameter-optimized models
+using GridSearch and CV. 
 Present models: 
    -- Ridge 
    -- Lasso
